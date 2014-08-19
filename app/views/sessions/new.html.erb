@@ -1,0 +1,17 @@
+<%= flash[:email_error] %>
+
+<%= form_for @user, html: {class: 'form-horizontal'}, :url => {:action => 'create'} do |f| %>
+
+  <%= f.label :email, {class: "col-sm-2 control-label"} %>
+  <%= f.email_field :email, {class: "form-control", autofocus: true} %>
+
+
+
+  <%= f.label :password, {class: "col-sm-2 control-label"} %>
+  <%= f.password_field :password, {class: "form-control"} %>
+
+
+
+  <%= f.submit "Login", :class => "btn btn-primary" %>
+
+<% end %>
